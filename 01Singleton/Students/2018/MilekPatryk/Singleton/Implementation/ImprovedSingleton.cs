@@ -1,6 +1,10 @@
-﻿// ReSharper disable once CheckNamespace
+﻿using System;
+using System.Runtime.Serialization;
+
+// ReSharper disable once CheckNamespace
 namespace Singleton
 {
+    [Serializable]
     public class ImprovedSingleton
     {
         private static ImprovedSingleton _instance;

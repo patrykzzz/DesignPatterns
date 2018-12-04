@@ -197,9 +197,12 @@
   <ItemGroup>
     <Compile Include="Benchmarks\PerformanceBenchmarks.cs" />
     <Compile Include="Implementation\ImprovedSingleton.cs" />
+    <Compile Include="Implementation\SerializableSingleton.cs" />
     <Compile Include="Implementation\Singleton.cs" />
+    <Compile Include="Implementation\SingletonSerializationHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\SerializableSingletonTests.cs" />
     <Compile Include="Tests\SingletonTests.cs" />
   </ItemGroup>
   <ItemGroup>
