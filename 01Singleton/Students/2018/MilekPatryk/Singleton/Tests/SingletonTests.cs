@@ -9,13 +9,13 @@ namespace Singleton.Tests
         public void GetInstance_ForThousandCopies_ShouldHaveSameInstance()
         {
             // Arrange
-            var instances = new Singleton[10];
+            var instances = new ImprovedSingleton[1000];
 
             // Act
-            Parallel.For(0, 10, index => instances[index] = Singleton.GetInstance());
+            Parallel.For(0, 1000, index => instances[index] = ImprovedSingleton.GetInstance());
 
             // Assert
-            var expectedInstance = Singleton.GetInstance();
+            var expectedInstance = ImprovedSingleton.GetInstance();
             Assert.All(instances, instance => Assert.Same(expectedInstance, instance));
         }
 
@@ -23,8 +23,8 @@ namespace Singleton.Tests
         public void GetInstance_ForTwoCopies_ShouldHaveSameInstance()
         {
             // Arrange & Act
-            var firstInstance = Singleton.GetInstance();
-            var secondInstance = Singleton.GetInstance();
+            var firstInstance = ImprovedSingleton.GetInstance();
+            var secondInstance = ImprovedSingleton.GetInstance();
             
             // Assert
             Assert.Same(firstInstance, secondInstance);

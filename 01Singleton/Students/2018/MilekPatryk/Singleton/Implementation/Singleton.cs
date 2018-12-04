@@ -14,18 +14,14 @@ namespace Singleton
 
         public static Singleton GetInstance()
         {
-            if (_instance == null)
+            lock (Lock)
             {
-                lock (Lock)
+                if (_instance == null)
                 {
-                    if (_instance == null)
-                    {
-                        _instance = new Singleton();
-                    }
+                    _instance = new Singleton();
                 }
+                return _instance;
             }
-
-            return _instance;
         }
     }
 }
