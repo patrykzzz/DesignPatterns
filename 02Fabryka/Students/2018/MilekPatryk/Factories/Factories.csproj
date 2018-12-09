@@ -43,6 +43,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementation\Simple\Abstract\ISimpleFactory.cs" />
+    <Compile Include="Implementation\Simple\ToyotaSimpleFactory.cs" />
+    <Compile Include="Implementation\Simple\HyundaiSimpleFactory.cs" />
+    <Compile Include="Implementation\Simple\TeslaSimpleFactory.cs" />
+    <Compile Include="Implementation\Simple\SimpleFactory.cs" />
+    <Compile Include="Models\Abstract\Car.cs" />
+    <Compile Include="Models\Abstract\CombustionCar.cs" />
+    <Compile Include="Models\Abstract\ElectricCar.cs" />
+    <Compile Include="Models\Abstract\HybridCar.cs" />
+    <Compile Include="Models\Hyundai\HyundaiCombustion.cs" />
+    <Compile Include="Models\Hyundai\HyundaiElectric.cs" />
+    <Compile Include="Models\Hyundai\HyundaiHybrid.cs" />
+    <Compile Include="Models\Tesla\TeslaModel3.cs" />
+    <Compile Include="Models\Tesla\TeslaModelS.cs" />
+    <Compile Include="Models\Toyota\ToyotaCombustion.cs" />
+    <Compile Include="Models\Toyota\ToyotaElectric.cs" />
+    <Compile Include="Models\Toyota\ToyotaHybrid.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
