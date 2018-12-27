@@ -1,8 +1,8 @@
-﻿using Factories.Implementation.Simple.Abstract;
+﻿using Factories.Implementation.SimpleFactory.Abstract;
 using Factories.Models.Abstract;
 using Factories.Models.Toyota;
 
-namespace Factories.Implementation.Simple
+namespace Factories.Implementation.FactoryMethod
 {
     public class ToyotaSimpleFactory : ISimpleFactory
     {

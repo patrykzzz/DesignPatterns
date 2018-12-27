@@ -43,11 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Implementation\Simple\Abstract\ISimpleFactory.cs" />
-    <Compile Include="Implementation\Simple\ToyotaSimpleFactory.cs" />
-    <Compile Include="Implementation\Simple\HyundaiSimpleFactory.cs" />
-    <Compile Include="Implementation\Simple\TeslaSimpleFactory.cs" />
-    <Compile Include="Implementation\Simple\SimpleFactory.cs" />
+    <Compile Include="Implementation\AbstractFactory\AbstractClient.cs" />
+    <Compile Include="Implementation\AbstractFactory\Abstract\AbstractFactory.cs" />
+    <Compile Include="Implementation\AbstractFactory\HyundaiFactory.cs" />
+    <Compile Include="Implementation\AbstractFactory\TeslaConcreteFactory.cs" />
+    <Compile Include="Implementation\AbstractFactory\ToyotaConcreteFactory.cs" />
+    <Compile Include="Implementation\GenericFactory\CarFactory.cs" />
+    <Compile Include="Implementation\ReflectionFactory\ReflectionFactory.cs" />
+    <Compile Include="Implementation\SimpleFactory\Abstract\ISimpleFactory.cs" />
+    <Compile Include="Implementation\FactoryMethod\ToyotaFactory.cs" />
+    <Compile Include="Implementation\FactoryMethod\HyundaiFactory.cs" />
+    <Compile Include="Implementation\FactoryMethod\TeslaFactory.cs" />
+    <Compile Include="Implementation\SimpleFactory\SimpleFactory.cs" />
     <Compile Include="Models\Abstract\Car.cs" />
     <Compile Include="Models\Abstract\CombustionCar.cs" />
     <Compile Include="Models\Abstract\ElectricCar.cs" />
@@ -55,6 +62,8 @@
     <Compile Include="Models\Hyundai\HyundaiCombustion.cs" />
     <Compile Include="Models\Hyundai\HyundaiElectric.cs" />
     <Compile Include="Models\Hyundai\HyundaiHybrid.cs" />
+    <Compile Include="Models\Tesla\TeslaCombustion.cs" />
+    <Compile Include="Models\Tesla\TeslaHybrid.cs" />
     <Compile Include="Models\Tesla\TeslaModel3.cs" />
     <Compile Include="Models\Tesla\TeslaModelS.cs" />
     <Compile Include="Models\Toyota\ToyotaCombustion.cs" />
@@ -66,5 +75,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

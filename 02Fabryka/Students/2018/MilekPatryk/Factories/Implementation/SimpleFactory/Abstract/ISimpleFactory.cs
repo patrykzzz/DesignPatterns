@@ -1,6 +1,6 @@
 ﻿using Factories.Models.Abstract;
 
-namespace Factories.Implementation.Simple.Abstract
+namespace Factories.Implementation.SimpleFactory.Abstract
 {
     public interface ISimpleFactory
     {

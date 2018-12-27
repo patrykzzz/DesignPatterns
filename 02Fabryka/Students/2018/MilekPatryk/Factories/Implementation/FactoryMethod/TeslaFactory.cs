@@ -1,10 +1,10 @@
-﻿using Factories.Implementation.Simple.Abstract;
+﻿using Factories.Implementation.SimpleFactory.Abstract;
 using Factories.Models.Abstract;
 using Factories.Models.Tesla;
 
-namespace Factories.Implementation.Simple
+namespace Factories.Implementation.FactoryMethod
 {
-    public class TeslaSimpleFactory : ISimpleFactory
+    public class TeslaFactory : ISimpleFactory
     {
         public Car Create(string type)
         {
@@ -19,15 +19,15 @@ namespace Factories.Implementation.Simple
             }
         }
 
-        private static TeslaSimpleFactory _instance;
+        private static TeslaFactory _instance;
         private static readonly object Lock = new object();
 
-        private TeslaSimpleFactory()
+        private TeslaFactory()
         {
 
         }
 
-        public static TeslaSimpleFactory GetInstance()
+        public static TeslaFactory GetInstance()
         {
             if (_instance == null)
             {
@@ -35,7 +35,7 @@ namespace Factories.Implementation.Simple
                 {
                     if (_instance == null)
                     {
-                        _instance = new TeslaSimpleFactory();
+                        _instance = new TeslaFactory();
                     }
                 }
             }

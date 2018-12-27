@@ -1,10 +1,10 @@
-﻿using Factories.Implementation.Simple.Abstract;
+﻿using Factories.Implementation.SimpleFactory.Abstract;
 using Factories.Models.Abstract;
 using Factories.Models.Hyundai;
 
-namespace Factories.Implementation.Simple
+namespace Factories.Implementation.FactoryMethod
 {
-    public class HyundaiSimpleFactory : ISimpleFactory
+    public class HyundaiFactory : ISimpleFactory
     {
         public Car Create(string type)
         {
@@ -20,16 +20,16 @@ namespace Factories.Implementation.Simple
                     return null;
             }
         }
-
-        private static HyundaiSimpleFactory _instance;
+        
+        private static HyundaiFactory _instance;
         private static readonly object Lock = new object();
 
-        private HyundaiSimpleFactory()
+        private HyundaiFactory()
         {
 
         }
 
-        public static HyundaiSimpleFactory GetInstance()
+        public static HyundaiFactory GetInstance()
         {
             if (_instance == null)
             {
@@ -37,7 +37,7 @@ namespace Factories.Implementation.Simple
                 {
                     if (_instance == null)
                     {
-                        _instance = new HyundaiSimpleFactory();
+                        _instance = new HyundaiFactory();
                     }
                 }
             }
