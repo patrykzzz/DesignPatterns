@@ -1,5 +1,4 @@
-﻿using System;
-using BenchmarkDotNet.Running;
+﻿using BenchmarkDotNet.Running;
 using Factories.Tests.Benchmarks;
 
 namespace Factories.Tests
