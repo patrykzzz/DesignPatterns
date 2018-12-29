@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrototypePattern", "PrototypePattern\PrototypePattern.csproj", "{70D96BB5-0766-453C-9EB7-030BF00898DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrototypePattern.Tests", "PrototypePattern.Tests\PrototypePattern.Tests.csproj", "{6F21A96E-2E46-4908-861E-BACFDACC3CA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70D96BB5-0766-453C-9EB7-030BF00898DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70D96BB5-0766-453C-9EB7-030BF00898DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70D96BB5-0766-453C-9EB7-030BF00898DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70D96BB5-0766-453C-9EB7-030BF00898DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F21A96E-2E46-4908-861E-BACFDACC3CA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F21A96E-2E46-4908-861E-BACFDACC3CA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F21A96E-2E46-4908-861E-BACFDACC3CA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F21A96E-2E46-4908-861E-BACFDACC3CA6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {03C3A293-F06B-447C-8CF3-A81CA1D432CE}
+	EndGlobalSection
+EndGlobal
