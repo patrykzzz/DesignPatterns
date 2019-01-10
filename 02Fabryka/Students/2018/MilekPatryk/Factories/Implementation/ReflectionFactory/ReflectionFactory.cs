@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using Factories.Models.Abstract;
 using Factories.Models.Hyundai;
@@ -8,9 +9,10 @@ namespace Factories.Implementation.ReflectionFactory
 {
     public class ReflectionFactory
     {
-        public Car Create(string manufacturer, string carType)
+        public Car Create(string name)
         {
-            CarTypeDictionary.TryGetValue((manufacturer, carType), out var type);
+            CarTypeDictionary.TryGetValue(name, out var type);
+
             if (type == null)
             {
                 throw new Exception("Car with given parameters is not supported.");
@@ -18,12 +20,7 @@ namespace Factories.Implementation.ReflectionFactory
             return (Car) Assembly.GetExecutingAssembly().CreateInstance(type.ToString());
         }
 
-        private static readonly Dictionary<(string, string), Type> CarTypeDictionary = new Dictionary<(string, string), Type>
-        {
-            { ("Hyundai", "Electric"), typeof(HyundaiElectric) },
-            { ("Hyundai", "Combustion"), typeof(HyundaiCombustion) },
-            { ("Hyundai", "Hybrid"), typeof(HyundaiHybrid) },
-        };
+        private readonly Dictionary<string, Type> CarTypeDictionary;
 
 
         private static ReflectionFactory _instance;
@@ -31,7 +28,10 @@ namespace Factories.Implementation.ReflectionFactory
 
         private ReflectionFactory()
         {
-
+            var types = Assembly.GetAssembly(typeof(Car))
+                .GetTypes()
+                .Where(x => x.IsSubclassOf(typeof(Car)) && !x.IsAbstract);
+            CarTypeDictionary = types.ToDictionary(x => x.Name, x => x);
         }
 
         public static ReflectionFactory GetInstance()

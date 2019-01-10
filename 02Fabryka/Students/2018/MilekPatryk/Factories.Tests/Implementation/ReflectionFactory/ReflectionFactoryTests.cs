@@ -13,9 +13,9 @@ namespace Factories.Tests.Implementation.ReflectionFactory
             var factory = Factories.Implementation.ReflectionFactory.ReflectionFactory.GetInstance();
 
             // Act
-            var combustionHyundai = factory.Create("Hyundai", "Combustion");
-            var electricHyundai = factory.Create("Hyundai", "Electric");
-            var hybridHyundai = factory.Create("Hyundai", "Hybrid");
+            var combustionHyundai = factory.Create("HyundaiCombustion");
+            var electricHyundai = factory.Create("HyundaiElectric");
+            var hybridHyundai = factory.Create("HyundaiHybrid");
 
             // Assert
             Assert.IsInstanceOf<HyundaiCombustion>(combustionHyundai);

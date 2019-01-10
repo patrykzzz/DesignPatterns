@@ -45,7 +45,7 @@
   <ItemGroup>
     <Compile Include="Implementation\AbstractFactory\AbstractClient.cs" />
     <Compile Include="Implementation\AbstractFactory\Abstract\AbstractFactory.cs" />
-    <Compile Include="Implementation\AbstractFactory\HyundaiFactory.cs" />
+    <Compile Include="Implementation\AbstractFactory\HyundaiConcreteFactory.cs" />
     <Compile Include="Implementation\AbstractFactory\TeslaConcreteFactory.cs" />
     <Compile Include="Implementation\AbstractFactory\ToyotaConcreteFactory.cs" />
     <Compile Include="Implementation\GenericFactory\CarFactory.cs" />

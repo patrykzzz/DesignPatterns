@@ -45,7 +45,7 @@ namespace Factories.Tests.Benchmarks
         {
             for (var i = 0; i < N; i++)
             {
-                _reflectionFactory.Create("Hyundai", "Electric");
+                _reflectionFactory.Create("HyundaiElectric");
             }
         }
 
