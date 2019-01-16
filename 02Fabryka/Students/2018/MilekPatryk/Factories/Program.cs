@@ -20,7 +20,7 @@ namespace Factories
             Console.WriteLine($"Created car's name: {car.Name}");
 
             // Generic factory
-            var factory = CarFactory.GetInstance();
+            var factory = GenericCarFactory.GetInstance();
 
             car = factory.Create<ToyotaCombustion>();
             Console.WriteLine($"Generic created toyota combustion car's name: {car.Name}, type: {car.GetType()}");

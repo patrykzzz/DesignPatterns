@@ -48,7 +48,7 @@
     <Compile Include="Implementation\AbstractFactory\HyundaiConcreteFactory.cs" />
     <Compile Include="Implementation\AbstractFactory\TeslaConcreteFactory.cs" />
     <Compile Include="Implementation\AbstractFactory\ToyotaConcreteFactory.cs" />
-    <Compile Include="Implementation\GenericFactory\CarFactory.cs" />
+    <Compile Include="Implementation\GenericFactory\GenericCarFactory.cs" />
     <Compile Include="Implementation\ReflectionFactory\ReflectionFactory.cs" />
     <Compile Include="Implementation\SimpleFactory\Abstract\ISimpleFactory.cs" />
     <Compile Include="Implementation\FactoryMethod\ToyotaFactory.cs" />

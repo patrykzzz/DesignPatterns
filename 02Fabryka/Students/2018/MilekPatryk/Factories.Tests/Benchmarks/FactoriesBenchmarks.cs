@@ -9,7 +9,7 @@ namespace Factories.Tests.Benchmarks
 {
     public class FactoriesBenchmarks
     {
-        private readonly CarFactory _genericFactory;
+        private readonly GenericCarFactory _genericFactory;
         private readonly ReflectionFactory _reflectionFactory;
         private readonly AbstractFactory _abstractFactory;
 
@@ -18,7 +18,7 @@ namespace Factories.Tests.Benchmarks
 
         public FactoriesBenchmarks()
         {
-            _genericFactory = CarFactory.GetInstance();
+            _genericFactory = GenericCarFactory.GetInstance();
             _reflectionFactory = ReflectionFactory.GetInstance();
             _abstractFactory = HyundaiConcreteFactory.GetInstance();
         }
